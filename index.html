@@ -15,6 +15,56 @@
 
 <style>
 
+  /* MODE HP */
+@media (max-width:600px){
+
+table, thead, tbody, th, td, tr{
+display:block;
+width:100%;
+}
+
+thead{
+display:none;
+}
+
+tr{
+background:#fff;
+margin-bottom:15px;
+border:2px solid #777;
+padding:10px;
+border-radius:8px;
+}
+
+td{
+border:none;
+border-bottom:1px solid #ddd;
+text-align:left;
+padding:8px;
+}
+
+td:last-child{
+border-bottom:none;
+}
+
+td::before{
+font-weight:bold;
+display:block;
+margin-bottom:4px;
+}
+
+td:nth-child(1)::before{content:"Nama Barang";}
+td:nth-child(2)::before{content:"Jumlah";}
+td:nth-child(3)::before{content:"Harga Satuan";}
+td:nth-child(4)::before{content:"Total";}
+td:nth-child(5)::before{content:"Aksi";}
+
+td button{
+width:100%;
+margin-top:5px;
+}
+
+}
+
 body{
 font-family:Arial,sans-serif;
 background:#fff;
