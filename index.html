@@ -4,10 +4,13 @@
   <meta charset="UTF-8">
   <title>Penghitung Belanja</title>
   
-  <link rel="manifest" href=manifest.json">
-  <link rel="icon" href=logo.png">
+<!-- ICON -->
+<link rel="icon" href="logo.png">
+<link rel="apple-touch-icon" href="logo.png">
 
-  <meta name="theme-color" content="#121212">
+<!-- PWA -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#121212">
   
   <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
   
@@ -189,13 +192,14 @@
   }
 
   hitungTotal(); // inisialisasi saat awal
-</script>
 
+  
+// SERVICE WORKER
 
-<script>
-if ("serviceWorker" in navigator) {
+if("serviceWorker" in navigator){
+
 navigator.serviceWorker.register("service-worker.js")
-.then(()=>console.log("Service Worker Aktif"));
+
 }
 </script>
 
