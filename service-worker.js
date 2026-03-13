@@ -3,7 +3,7 @@ const CACHE_NAME = "penghitung-belanja-v1";
 const urlsToCache = [
   "./",
   "./index.html",
-  "./logo.png"
+  "./icon.png"
 ];
 
 self.addEventListener("install", function(event) {
