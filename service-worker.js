@@ -1,9 +1,12 @@
-const CACHE_NAME = "penghitung-belanja-v1";
+const CACHE_NAME = "belanja-app-v1";
 
 const urlsToCache = [
   "./",
   "./index.html",
-  "./icon.png"
+  "./icon.png",
+  "./manifest.json"
+  
+  "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
 ];
 
 self.addEventListener("install", function(event) {
