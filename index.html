@@ -12,6 +12,8 @@
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#121212">
   
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  
   <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
   
   <style>
@@ -193,7 +195,31 @@
 
   hitungTotal(); // inisialisasi saat awal
 
-  
+  const CACHE_NAME = "penghitung-belanja-v1";
+
+const urlsToCache = [
+  "./",
+  "./index.html",
+  "./logo.png"
+];
+
+self.addEventListener("install", function(event) {
+  event.waitUntil(
+    caches.open(CACHE_NAME)
+      .then(function(cache) {
+        return cache.addAll(urlsToCache);
+      })
+  );
+});
+
+self.addEventListener("fetch", function(event) {
+  event.respondWith(
+    caches.match(event.request)
+      .then(function(response) {
+        return response || fetch(event.request);
+      })
+  );
+});
 // SERVICE WORKER
 
 if("serviceWorker" in navigator){
