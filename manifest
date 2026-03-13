@@ -1,6 +1,6 @@
 {
-"name": "Web Tools",
-"short_name": "Tools",
+"name": "penghitungBelanja",
+"short_name": "penghitungBelanja",
 "start_url": "./index.html",
 "display": "standalone",
 "background_color": "#121212",
